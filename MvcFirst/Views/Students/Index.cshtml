@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<MvcFirst.Models.Student>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Students";
 }
 
-<h1>Index</h1>
+<h1>Students</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<a asp-controller="Courses" asp-action="Index">Courses</a>
 <form asp-controller="Students" asp-action="Index" method="get">
     <p>
         Student First Name: <input type="text" name="SearchString">
@@ -34,26 +35,29 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AverageScore)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Group.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AverageScore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Group.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
+                    <a asp-controller="Groups" asp-action="Details" asp-route-id="@item.GroupId">Group details</a> |
+                    <a asp-controller="Scores" asp-action="FindStudentScores" asp-route-id="@item.Id">Scores</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -18,7 +18,24 @@ namespace MvcFirst.Controllers
         {
             _context = context;
         }
-
+        public async Task<IActionResult> FindStudentScores(Guid? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var scores = await _context.Scores
+                .Include(score => score.Student)
+                .Include(score => score.Course)
+                .Include(score => score.Subject)
+                .Where(score => score.StudentId == id)
+                .ToListAsync();
+            if (scores == null)
+            {
+                return NotFound();
+            }
+            return View(scores);
+        }
         // GET: Scores
         public async Task<IActionResult> Index()
         {

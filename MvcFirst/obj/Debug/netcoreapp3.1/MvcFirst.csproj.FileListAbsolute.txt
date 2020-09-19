@@ -186,3 +186,9 @@ C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Students\Delete.csh
 C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Students\Details.cshtml.g.cs
 C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Students\Edit.cshtml.g.cs
 C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Students\Index.cshtml.g.cs
+C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Groups\Create.cshtml.g.cs
+C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Groups\Delete.cshtml.g.cs
+C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Groups\Details.cshtml.g.cs
+C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Groups\Edit.cshtml.g.cs
+C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Groups\Index.cshtml.g.cs
+C:\GIT\MvcFirst\MvcFirst\obj\Debug\netcoreapp3.1\Razor\Views\Scores\FindStudentScores.cshtml.g.cs
